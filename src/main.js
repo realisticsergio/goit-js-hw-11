@@ -33,6 +33,11 @@ refs.formEl.addEventListener('submit', e => {
     })
     .catch(err => {
         hideLoader();
+        iziToast.error({
+            title: 'Error',
+            message: 'Something went wrong! Please try again later.',
+            position: 'topRight',
+        });
         console.log(err);
     });
     e.currentTarget.reset();
